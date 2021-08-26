@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>solar-energy | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/solar-energy/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/solar-energy/index.xml" rel="self" type="application/rss+xml" />
+    <description>solar-energy</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>solar-energy</title>
+      <link>https://trinhvanvuong.github.io/tag/solar-energy/</link>
+    </image>
+    
+    <item>
+      <title>Energy Management of Solar Thermodynamic Micro Power Plant</title>
+      <link>https://trinhvanvuong.github.io/project/solar-energy/</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/solar-energy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;microsol.png&#34;&gt;&lt;img src=&#34;microsol.png&#34; alt=&#34;Photo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;solar_thermodynamic_micro_power_plant.png&#34;&gt;&lt;img src=&#34;solar_thermodynamic_micro_power_plant.png&#34; alt=&#34;Photo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fast-nonlinear-constrained-control-of-a-stirling-engine&#34;&gt;Fast nonlinear constrained control of a Stirling engine&lt;/h2&gt;
+&lt;h3 id=&#34;process-diagram&#34;&gt;Process diagram&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;stirling_diagram.png&#34;&gt;&lt;img src=&#34;stirling_diagram.png&#34; alt=&#34;Process diagram&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fast-explicit-constrained-control-synthesis&#34;&gt;Fast explicit constrained control synthesis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;empc_nonlin.png&#34;&gt;&lt;img src=&#34;empc_nonlin.png&#34; alt=&#34;Nonlinear analysis&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;real-time-validation&#34;&gt;Real-time validation&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;empc_valid.png&#34;&gt;&lt;img src=&#34;empc_valid.png&#34; alt=&#34;Validation and real-time analysis&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

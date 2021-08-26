@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>model-predictive-control | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/model-predictive-control/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/model-predictive-control/index.xml" rel="self" type="application/rss+xml" />
+    <description>model-predictive-control</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>model-predictive-control</title>
+      <link>https://trinhvanvuong.github.io/tag/model-predictive-control/</link>
+    </image>
+    
+    <item>
+      <title>Innovative Advanced Control of Large Cryogenic Systems</title>
+      <link>https://trinhvanvuong.github.io/project/cryogenic-refrigerator/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/cryogenic-refrigerator/</guid>
+      <description>&lt;p&gt;The ANR CRYOGREEN project gathers collaborative academic and industrial partners, including GIPSA-lab, CEA and CERN. We target to advanced control of large cryogenic systems via explicit nonlinear and hierarchical distributed model predictive control frameworks.&lt;/p&gt;
+
+
+
+
+
+
+
+
+  
+  
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://trinhvanvuong.github.io/project/cryogenic-refrigerator/gallery/cea.png&#34; &gt;
+      &lt;img data-src=&#34;https://trinhvanvuong.github.io/project/cryogenic-refrigerator/gallery/cea_hu2c1c26145dbe6550ac67eac2fb30b490_81348_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;cea.png&#34; width=&#34;233&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+    &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://trinhvanvuong.github.io/project/cryogenic-refrigerator/gallery/cern.png&#34; &gt;
+      &lt;img data-src=&#34;https://trinhvanvuong.github.io/project/cryogenic-refrigerator/gallery/cern_hu80af629b8f1fedf7b2af5df1b4baa5b0_32146_0x190_resize_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;cern.png&#34; width=&#34;190&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+  
+&lt;/div&gt;
+&lt;h2 id=&#34;international-thermonuclear-experimental-reactor&#34;&gt;International Thermonuclear Experimental Reactor&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;iter.png&#34;&gt;&lt;img src=&#34;iter.png&#34; alt=&#34;ITER&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;receding-horizon-control&#34;&gt;Receding Horizon Control&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;rhc.png&#34;&gt;&lt;img src=&#34;rhc.png&#34; alt=&#34;Receding horizon control principle&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;mpc_cstr.png&#34;&gt;&lt;img src=&#34;mpc_cstr.png&#34; alt=&#34;Constraints&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;mpc_param.png&#34;&gt;&lt;img src=&#34;mpc_param.png&#34; alt=&#34;Parametrization&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;explicit-constrained-control-of-warm-compression-stations&#34;&gt;Explicit Constrained Control of Warm Compression Stations&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;cern_wcs18kw.png&#34;&gt;&lt;img src=&#34;cern_wcs18kw.png&#34; alt=&#34;Warm compression station at CERN&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;nc1.png&#34;&gt;&lt;img src=&#34;nc1.png&#34; alt=&#34;Nitrogen compressor at CEA&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;valve_split_range.png&#34;&gt;&lt;img src=&#34;valve_split_range.png&#34; alt=&#34;Valves with split range configuration at CEA&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;process-configuration-and-dynamic-simulator&#34;&gt;Process configuration and dynamic simulator&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;wcs-config.png&#34;&gt;&lt;img src=&#34;wcs-config.png&#34; alt=&#34;Warm compression station configuration&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;wcs-simulator.png&#34;&gt;&lt;img src=&#34;wcs-simulator.png&#34; alt=&#34;Warm compression station&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;allocation-control-and-validation-results&#34;&gt;Allocation control and validation results&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;wcs-allocation.png&#34;&gt;&lt;img src=&#34;wcs-allocation.png&#34; alt=&#34;Allocation control&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;wcs-valid.png&#34;&gt;&lt;img src=&#34;wcs-valid.png&#34; alt=&#34;Validation result&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;hierarchical-constrained-control-of-cryogenic-refrigerators&#34;&gt;Hierarchical Constrained Control of Cryogenic Refrigerators&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;400W.png&#34;&gt;&lt;img src=&#34;400W.png&#34; alt=&#34;Cryogenic refrigerator at CEA&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;process-diagram-and-dynamic-simulator&#34;&gt;Process diagram and dynamic simulator&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;process-diagram.png&#34;&gt;&lt;img src=&#34;process-diagram.png&#34; alt=&#34;Process diagram&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;br-simulator.png&#34;&gt;&lt;img src=&#34;br-simulator.png&#34; alt=&#34;Brayton cycle&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;jt-simulator.png&#34;&gt;&lt;img src=&#34;jt-simulator.png&#34; alt=&#34;Joule-Thompson cycle&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;hierarchical-control-algorithm-and-numerical-results&#34;&gt;Hierarchical control algorithm and numerical results&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;hdmpc-algo.png&#34;&gt;&lt;img src=&#34;hdmpc-algo.png&#34; alt=&#34;Hierarchical control algorithm&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;aa-convergence.png&#34;&gt;&lt;img src=&#34;aa-convergence.png&#34; alt=&#34;Convergence result&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Energy Management of Solar Thermodynamic Micro Power Plant</title>
+      <link>https://trinhvanvuong.github.io/project/solar-energy/</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/solar-energy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;microsol.png&#34;&gt;&lt;img src=&#34;microsol.png&#34; alt=&#34;Photo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;solar_thermodynamic_micro_power_plant.png&#34;&gt;&lt;img src=&#34;solar_thermodynamic_micro_power_plant.png&#34; alt=&#34;Photo&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fast-nonlinear-constrained-control-of-a-stirling-engine&#34;&gt;Fast nonlinear constrained control of a Stirling engine&lt;/h2&gt;
+&lt;h3 id=&#34;process-diagram&#34;&gt;Process diagram&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;stirling_diagram.png&#34;&gt;&lt;img src=&#34;stirling_diagram.png&#34; alt=&#34;Process diagram&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fast-explicit-constrained-control-synthesis&#34;&gt;Fast explicit constrained control synthesis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;empc_nonlin.png&#34;&gt;&lt;img src=&#34;empc_nonlin.png&#34; alt=&#34;Nonlinear analysis&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;real-time-validation&#34;&gt;Real-time validation&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;empc_valid.png&#34;&gt;&lt;img src=&#34;empc_valid.png&#34; alt=&#34;Validation and real-time analysis&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

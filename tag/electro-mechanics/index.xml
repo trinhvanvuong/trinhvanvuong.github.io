@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>electro-mechanics | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/electro-mechanics/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/electro-mechanics/index.xml" rel="self" type="application/rss+xml" />
+    <description>electro-mechanics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>electro-mechanics</title>
+      <link>https://trinhvanvuong.github.io/tag/electro-mechanics/</link>
+    </image>
+    
+    <item>
+      <title>Active Vibration Control</title>
+      <link>https://trinhvanvuong.github.io/project/active-vibration-control/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/active-vibration-control/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

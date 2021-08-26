@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/publication-type/2/</link>
+      <atom:link href="https://trinhvanvuong.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <description>2</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>2</title>
+      <link>https://trinhvanvuong.github.io/publication-type/2/</link>
+    </image>
+    
+    <item>
+      <title>Fixed-point based hierarchical MPC control design for a cryogenic refrigerator</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

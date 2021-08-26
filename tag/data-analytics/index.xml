@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data-analytics | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/data-analytics/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/data-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <description>data-analytics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>data-analytics</title>
+      <link>https://trinhvanvuong.github.io/tag/data-analytics/</link>
+    </image>
+    
+    <item>
+      <title>Data Analytics Dashboard using Flask and Highcharts</title>
+      <link>https://trinhvanvuong.github.io/post/data-analytics-dashboard/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/post/data-analytics-dashboard/</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;text-shadow: none;&#34;&gt;&lt;a class=&#34;github-button&#34; href=&#34;https://github.com/trinhvv/flask-highcharts&#34; data-icon=&#34;octicon-star&#34; data-size=&#34;large&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star this on GitHub&#34;&gt;Star&lt;/a&gt;&lt;script async defer src=&#34;https://buttons.github.io/buttons.js&#34;&gt;&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A tutorial to develop a web dashboard for data analytics using Python Flask and JavaScript Highcharts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub repository: &lt;a href=&#34;https://github.com/trinhvv/flask-highcharts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/trinhvv/flask-highcharts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Live demo: &lt;a href=&#34;https://flask-highcharts.herokuapp.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://flask-highcharts.herokuapp.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tutorial&#34;&gt;Tutorial&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fetch data from &lt;a href=&#34;https://www.blockchain.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.blockchain.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Data preprocessing in Flask then parse to Highcharts&lt;/li&gt;
+&lt;li&gt;Deploy to Heroku&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;structure&#34;&gt;Structure&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;app.py
+Procfile
+requirements.txt
+runtime.txt
+static/
+templates/
+    index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;requirementstxt&#34;&gt;requirements.txt&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Flask
+gunicorn
+pandas
+six
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;apppy&#34;&gt;app.py&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;from flask import Flask, render_template, jsonify
+import pandas as pd
+from six.moves import urllib
+import json
+ 
+app = Flask(__name__)
+ 
+@app.route(&amp;quot;/data.json&amp;quot;)
+def data():
+    timeInterval = 1000
+    data = pd.DataFrame()
+    featureList = [&#39;market-price&#39;, 
+                   &#39;trade-volume&#39;]
+    for feature in featureList:
+        url = &amp;quot;https://api.blockchain.info/charts/&amp;quot;+feature+&amp;quot;?timespan=&amp;quot;+str(timeInterval)+&amp;quot;days&amp;amp;format=json&amp;quot;
+        data[&#39;time&#39;] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode(&#39;utf-8&#39;))[&#39;values&#39;])[&#39;x&#39;]*1000
+        data[feature] = pd.DataFrame(json.loads(urllib.request.urlopen(url).read().decode(&#39;utf-8&#39;))[&#39;values&#39;])[&#39;y&#39;]
+    result = data.to_dict(orient=&#39;records&#39;)
+    seq = [[item[&#39;time&#39;], item[&#39;market-price&#39;], item[&#39;trade-volume&#39;]] for item in result]
+    return jsonify(seq)
+ 
+@app.route(&amp;quot;/&amp;quot;)
+def index():
+    return render_template(&#39;index.html&#39;)
+ 
+if __name__ == &#39;__main__&#39;:
+    app.run(debug=True, threaded=True, host=&#39;0.0.0.0&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;templatesindexhtml&#34;&gt;templates/index.html&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html PUBLIC &amp;quot;-//W3C//DTD HTML 4.01//EN&amp;quot; &amp;quot;http://www.w3.org/TR/html4/strict.dtd&amp;quot;&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;
+      Chart
+    &amp;lt;/title&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot;&amp;gt;
+    &amp;lt;script src=&amp;quot;https://code.jquery.com/jquery-3.1.1.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script src=&amp;quot;https://code.highcharts.com/stock/highstock.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script src=&amp;quot;https://code.highcharts.com/stock/modules/exporting.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+        $.getJSON(&#39;/data.json&#39;, function (data) {
+            // create the chart
+            Highcharts.stockChart(&#39;container&#39;, {
+                title: {
+                    text: &#39;Bitcoin&#39;
+                },
+                rangeSelector: {
+                    selected: 1,
+                    inputEnabled: false
+                },
+                series: [{
+                    name: &#39;Bitcoin&#39;,
+                    data: data,
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
+        });
+    &amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;container&amp;quot; style=&amp;quot;height: 400px; min-width: 310px; max-width: 1000px&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;procfile&#34;&gt;Procfile&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;web: gunicorn app:app --log-file=-
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;runtimetxt&#34;&gt;runtime.txt&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;python-3.6.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;deploy-to-heroku&#34;&gt;Deploy to Heroku&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;heroku create flask-highcharts --buildpack heroku/python
+heroku login
+git init
+heroku git:remote -a flask-highcharts
+git add .
+git commit -am &amp;quot;make it better&amp;quot;
+git push heroku master
+heroku ps:scale bot=1 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;screenshot&#34;&gt;Screenshot&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;screenshot.png&#34; alt=&#34;screenshot.png&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

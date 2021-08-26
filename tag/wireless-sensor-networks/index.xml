@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wireless-sensor-networks | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/wireless-sensor-networks/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/wireless-sensor-networks/index.xml" rel="self" type="application/rss+xml" />
+    <description>wireless-sensor-networks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>wireless-sensor-networks</title>
+      <link>https://trinhvanvuong.github.io/tag/wireless-sensor-networks/</link>
+    </image>
+    
+    <item>
+      <title>Real-time Anomaly Detection for Industrial Big Data</title>
+      <link>https://trinhvanvuong.github.io/project/anomaly-detection/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/anomaly-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

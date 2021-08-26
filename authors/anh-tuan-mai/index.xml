@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anh Tuan Mai | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/anh-tuan-mai/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/anh-tuan-mai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Anh Tuan Mai</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Thu, 10 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Anh Tuan Mai</title>
+      <link>https://trinhvanvuong.github.io/authors/anh-tuan-mai/</link>
+    </image>
+    
+    <item>
+      <title>Anomaly detection in wireless sensor networks via support vector data description with Mahalanobis kernels and discriminative adjustment</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

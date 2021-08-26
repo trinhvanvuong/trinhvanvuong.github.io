@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Authors</title>
+      <link>https://trinhvanvuong.github.io/authors/</link>
+    </image>
+    
+  </channel>
+</rss>

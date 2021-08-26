@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thu Huong Truong | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/thu-huong-truong/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/thu-huong-truong/index.xml" rel="self" type="application/rss+xml" />
+    <description>Thu Huong Truong</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Tue, 16 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Thu Huong Truong</title>
+      <link>https://trinhvanvuong.github.io/authors/thu-huong-truong/</link>
+    </image>
+    
+    <item>
+      <title>Data driven hyperparameter optimization of one-class support vector machines for anomaly detection in wireless sensor networks</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</link>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

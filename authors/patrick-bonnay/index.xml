@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Bonnay | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/patrick-bonnay/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/patrick-bonnay/index.xml" rel="self" type="application/rss+xml" />
+    <description>Patrick Bonnay</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Patrick Bonnay</title>
+      <link>https://trinhvanvuong.github.io/authors/patrick-bonnay/</link>
+    </image>
+    
+    <item>
+      <title>Fixed-point based hierarchical MPC control design for a cryogenic refrigerator</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the stabilization of fixed-point iterations arising in hierarchical control design</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-hdmpc-ifacwc/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-hdmpc-ifacwc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Explicit model predictive control via nonlinear piecewise approximations</title>
+      <link>https://trinhvanvuong.github.io/publication/2016-enmpc-nolcos/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2016-enmpc-nolcos/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

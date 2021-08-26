@@ -1,0 +1,1408 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 5.0.0-beta.2 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Vuong V. Trinh">
+
+  
+  
+  
+    
+  
+  <meta name="description" content=" ">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://trinhvanvuong.github.io/post/trading-analysis-bot/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#1565c0">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.43d3c96e828e85b0b0be4980653cbf43.css">
+
+  
+
+
+
+
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+  <link rel="manifest" href="/index.webmanifest">
+  
+
+  <link rel="icon" type="image/png" href="/images/icon_hudf96b447fce3d199dc045f94a1f6b16b_2490_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hudf96b447fce3d199dc045f94a1f6b16b_2490_180x180_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://trinhvanvuong.github.io/post/trading-analysis-bot/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Vuong V. Trinh">
+  <meta property="og:url" content="https://trinhvanvuong.github.io/post/trading-analysis-bot/">
+  <meta property="og:title" content="Trading Analysis Bot | Vuong V. Trinh">
+  <meta property="og:description" content=" "><meta property="og:image" content="https://trinhvanvuong.github.io/post/trading-analysis-bot/featured.png">
+  <meta property="twitter:image" content="https://trinhvanvuong.github.io/post/trading-analysis-bot/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-01-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://trinhvanvuong.github.io/post/trading-analysis-bot/"
+  },
+  "headline": "Trading Analysis Bot",
+  
+  "image": [
+    "https://trinhvanvuong.github.io/post/trading-analysis-bot/featured.png"
+  ],
+  
+  "datePublished": "2018-01-01T00:00:00Z",
+  "dateModified": "2018-01-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Vuong V. Trinh"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vuong V. Trinh",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://trinhvanvuong.github.io/images/logo_hu6c1b79c7208aa9cd1b2619a683cfc448_676392_192x192_fit_lanczos_2.png"
+    }
+  },
+  "description": " "
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Trading Analysis Bot | Vuong V. Trinh</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  ">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.d876f1a6b98701f9238f2313b512a26f.js"></script>
+
+  
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu6c1b79c7208aa9cd1b2619a683cfc448_676392_0x70_resize_lanczos_2.png" alt="Vuong V. Trinh"></a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/"><img src="/images/logo_hu6c1b79c7208aa9cd1b2619a683cfc448_676392_0x70_resize_lanczos_2.png" alt="Vuong V. Trinh"></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Portfolio</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Trading Analysis Bot</h1>
+
+  
+  <p class="page-subtitle">Data-Driven Analytics of Crypto-Market</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 1, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><span style="text-shadow: none;"><a class="github-button" href="https://github.com/trinhvv/trading-analysis-bot" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span></p>
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-trading-analysis-bothttpstmetrading_analysis_bot">
+
+
+  <a data-fancybox="" href="/post/trading-analysis-bot/featured_hu2f55a9a75bbb568918903250c9bbb6df_37938_2000x2000_fit_lanczos_2.png" data-caption="&lt;a href=&#34;https://t.me/trading_analysis_bot&#34;&gt;Trading Analysis Bot&lt;/a&gt;">
+
+
+  <img data-src="/post/trading-analysis-bot/featured_hu2f55a9a75bbb568918903250c9bbb6df_37938_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="640" height="640">
+</a>
+
+
+  
+  
+  <figcaption>
+    <a href="https://t.me/trading_analysis_bot">Trading Analysis Bot</a>
+  </figcaption>
+
+
+</figure>
+
+<h2 id="features">Features</h2>
+<h3 id="fundamental-information">Fundamental information</h3>
+<pre><code>/i evx
+</code></pre>
+<pre><code>#EVX
+Type: TOKEN
+Consensus Protocol: POW
+Cryptographic Algorithm: Ethash
+Website: https://www.everex.io/
+Social Media: 
+https://t.me/everexio
+https://www.facebook.com/everex.io
+https://twitter.com/everexio
+Explorers: 
+https://etherscan.io/token/0xf3db5fa2c66b7af3eb0c0b782510816cbe4813b8
+Market Cap: $10,694,046
+Current Price: $0.473188
+Issue Price: $0.880000
+Issue Date: 2017-10-11
+Max Supply: -
+Total Supply: 25,000,000
+Circulating Supply: 22,600,000
+</code></pre>
+<h3 id="short-term-transactions">Short-term transactions</h3>
+<pre><code>/s tnt
+</code></pre>
+<pre><code>#TNTBTC 92,966,054.00 (94.84%)
+P: 0.00000730 V: 608.23 VWAP: 0.00000654
+30 mins: Buy 12.07 Sell 6.42
+15 mins: Buy 8.37 Sell 3.97
+5 mins: Buy 4.19 Sell 2.16
+#TNTETH 5,059,783.00 (5.16%)
+P: 0.00026182 V: 1,194.92 VWAP: 0.00023616
+30 mins: Buy 13.32 Sell 12.58
+15 mins: Buy 8.04 Sell 2.38
+5 mins: Buy 1.76 Sell 1.99
+</code></pre>
+<h3 id="technical-analysis">Technical analysis</h3>
+<pre><code>/x btc
+</code></pre>
+<p><img src="x.png" alt="x.png"></p>
+<h3 id="market-movement-statistics">Market movement statistics</h3>
+<pre><code>/m
+</code></pre>
+<pre><code>#MARKET
+USDⓈ: 20 (+) 113 (-)
+ALTS: 43 (+) 89 (-)
+BNB: 63 (+) 30 (-)
+BTC: 120 (+) 31 (-)
+Tue Jul  2 13:48:21 2019
+</code></pre>
+<h3 id="altcoin-market-money-flows">Altcoin market money flows</h3>
+<pre><code>/e
+</code></pre>
+<p><img src="market.png" alt="market.png"></p>
+<h3 id="on-chain-exchange-flows">On-chain exchange flows</h3>
+<pre><code>/b
+</code></pre>
+<pre><code>*Daily BTC exchange flows*
+#Binance: $75M in | $68M out
+#Bitmex: $18M in | $7M out
+#Bitfinex: $6M in | $8M out
+#Bitstamp: $18M in | $22M out
+#Bittrex: $2M in | $4M out
+#Poloniex: $1M in | $2M out
+
+*Daily ETH exchange flows*
+#Binance: $24M in | $12M out
+#Bitfinex: $2M in | $1M out
+#Bittrex: $240k in | $415k out
+#Kraken: $2M in | $2M out
+#Kucoin: $406k in | $235k out
+#Poloniex: $325k in | $352k out
+
+*Weekly BTC exchange flows*
+Inflow: $703.8M (-42.1% from last week)
+Outflow: $763.5M (-27.8% from last week)
+Net flow: -$59.7M
+#BTC price: $8084.63 (-1.3% from last week)
+
+*Weekly ETH exchange flows*
+Inflow: $119.1M (-37.5% from last week)
+Outflow: $111.8M (-48.7% from last week)
+Net flow: $7.3M
+#ETH price: $175.74 (+0.8% from last week)
+
+*Weekly Stablecoin exchange flows*
+Inflow: $264.3M (-51.1% from last week)
+Outflow: $364.0M (-45.7% from last week)
+Net flow: -$99.7M
+</code></pre>
+<p><img src="b.png" alt="b.png"></p>
+<h3 id="transaction-activities">Transaction activities</h3>
+<pre><code>/w USDT mint
+</code></pre>
+<pre><code>*Transaction activities*
+2019-10-12: 💵  2,500,000 #USDT (2,494,282 USD) minted at Tether Treasury
+2019-10-12: 💵  5,000,000 #USDT (5,012,230 USD) minted at Tether Treasury
+2019-10-11: 💵 💵  15,000,000 #USDT (15,077,725 USD) minted at Tether Treasury
+2019-10-10: 💵 💵 💵  20,000,000 #USDT (20,002,176 USD) minted at Tether Treasury
+2019-10-07: 💵 💵  12,387,600 #USDT (12,392,934 USD) minted at Tether Treasury
+2019-10-07: 💵 💵  20,000,000 #USDT (19,952,765 USD) minted at Tether Treasury
+2019-10-04: 💵 💵  12,600,000 #USDT (12,725,111 USD) minted at Tether Treasury
+2019-10-04: 💵  5,000,000 USDT (5,035,628 USD) minted at Tether Treasury
+2019-09-30: 💵 💵  20,000,000 #USDT (19,996,690 USD) minted at Tether Treasury
+</code></pre>
+<pre><code>/w BTC Binance
+</code></pre>
+<pre><code>*Transaction activities*
+2019-10-16: 🚨 🚨  3,359 #BTC (26,705,730 USD) transferred from #Binance to unknown wallet
+2019-10-16: 🚨 🚨  3,000 #BTC (23,834,707 USD) transferred from unknown wallet to #Binance
+2019-10-14: 🚨 🚨  3,000 #BTC (24,890,913 USD) transferred from #Binance to #Gemini
+2019-10-11: 🚨 🚨  2,721 #BTC (22,854,703 USD) transferred from #Binance to unknown wallet
+2019-10-11: 🚨 🚨  2,721 #BTC (22,648,785 USD) transferred from unknown wallet to #Binance
+2019-10-11: 🚨  1,300 #BTC (10,937,468 USD) transferred from unknown wallet to #Binance
+2019-10-10: 643 #BTC (5,526,899 USD) transferred from #Binance to unknown wallet
+2019-10-08: 602 #BTC (4,919,049 USD) transferred from #Binance to unknown wallet
+2019-10-08: 1,111 #BTC (9,122,044 USD) transferred from #Binance to unknown wallet
+2019-10-07: 659 #BTC (5,413,301 USD) transferred from #Coinbase to #Binance
+2019-10-07: 706 #BTC (5,772,057 USD) transferred from #Binance to unknown wallet
+</code></pre>
+<h3 id="liquidation-activities">Liquidation activities</h3>
+<pre><code>/r XBTUSD
+</code></pre>
+<pre><code>*Liquidation activities*
+2019-11-16 14:14:04: Liquidated long on XBTUSD: Sell 177,058 @ 8462
+2019-11-16 14:13:34: Liquidated long on XBTUSD: Sell 40,576 @ 8469
+2019-11-16 14:01:44: Liquidated short on XBTUSD: Buy 403,625 @ 8514
+2019-11-16 14:01:32: Liquidated short on XBTUSD: Buy 3,536 @ 8507
+2019-11-16 14:01:27: Liquidated short on XBTUSD: Buy 1 @ 8500.5
+2019-11-16 11:05:44: Liquidated long on XBTUSD: Sell 3,322 @ 8453.5
+2019-11-16 10:50:14: Liquidated long on XBTUSD: Sell 72 @ 8460.5
+2019-11-16 10:48:24: Liquidated long on XBTUSD: Sell 398,077 @ 8468.5
+2019-11-16 10:46:54: Liquidated long on XBTUSD: Sell 13,586 @ 8481.5
+2019-11-16 09:29:14: Liquidated short on XBTUSD: Buy 396,629 @ 8527
+2019-11-16 09:28:55: Liquidated short on XBTUSD: Buy 289,471 @ 8519
+2019-11-16 09:28:50: Liquidated short on XBTUSD: Buy 755,983 @ 8511
+2019-11-16 09:28:44: Liquidated short on XBTUSD: Buy 10 @ 8500.5
+2019-11-16 07:05:04: Liquidated short on XBTUSD: Buy 134,522 + 248,222 @ 8488.5, 8496
+2019-11-16 07:04:44: Liquidated short on XBTUSD: Buy 230 @ 8478
+2019-11-16 02:22:34: Liquidated long on XBTUSD: Sell 132,408 @ 8430.5
+</code></pre>
+<p><img src="r.png" alt="r.png"></p>
+<h3 id="newsflow">Newsflow</h3>
+<pre><code>/n
+</code></pre>
+<pre><code>*Newsflow*
+- [Messari Insight] Market signals indifference towards assets listed as likely securities by the Crypto Ratings Council 
+- Telegram will delay launch of TON blockchain in light of SEC pressure
+- Telegram may be under FinCEN investigation, Libra Association finalizes initial partners
+- Nasdaq lists an AI-powered index of crypto market’s top 100 performers
+- eToro launches crypto portfolio weighted by twitter mentions
+- CoinShares jointly rolls out a gold token ‘DGLD’, built on the bitcoin network #BTC
+- Layer1 is seeking $50 million to run wind-powered Bitcoin mining facilities in the US #BTC
+- Bitcoin ETF denial, crypto airdrop taxation, the future of Libra, and more
+- Grayscale wins approval for first public digital currency index fund #ETH #XRP #LTC #BTC
+- [Analysis] Cross-shard DeFi composability - Vitalik Buterin #ETH
+- Booking Holdings becomes the latest Libra dropout
+- DeFi Week of Oct. 7 - The Defiant
+- Telegram said it has been in talks with the SEC about TON &quot;for the past 18 months&quot; #GRAM
+- SEC, FinCEN and CFTC issue a 3-party joint statement on digital assets
+- Coinbase eyes further European expansion after winning an Irish e-money license
+- Zcash to develop a wrapped token for Ethereum #ZEC #ETH
+- The Evolution of Crypto Capital Markets
+- Incentivizing testnet participation #ATOM #DOT #ETH #TON #ERD #SOL
+- Stablecoins backed by national currencies #USDT
+- How crypto could fit in your portfolio #BTC #ETH
+- Crypto Rates Markets
+- Libra, the iTunes App Store for crypto devs
+- Crypto Monetary Policies #KMD #VEN #XZC #WAVES #GXS #XMR #REP #ATOM #WTC #ARDR #MANA #TRX #AION #ONT #XRP #XTZ #EOS #BCD #LOOM #BCN #ZEC #STEEM #DCR #MKR #BAT #BTG #DOGE #BNB #VEIL #NANO #NEO
+Source: https://messari.io
+</code></pre>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/blockchain-cryptoasset/">blockchain-cryptoasset</a>
+  
+  <a class="badge badge-light" href="/tag/artificial-intelligence/">artificial-intelligence</a>
+  
+  <a class="badge badge-light" href="/tag/financial-time-series/">financial-time-series</a>
+  
+  <a class="badge badge-light" href="/tag/quantitative-finance/">quantitative-finance</a>
+  
+  <a class="badge badge-light" href="/tag/trading-strategies/">trading-strategies</a>
+  
+  <a class="badge badge-light" href="/tag/derivatives/">derivatives</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://trinhvanvuong.github.io/post/trading-analysis-bot/&amp;text=Trading%20Analysis%20Bot" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://trinhvanvuong.github.io/post/trading-analysis-bot/&amp;t=Trading%20Analysis%20Bot" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Trading%20Analysis%20Bot&amp;body=https://trinhvanvuong.github.io/post/trading-analysis-bot/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://trinhvanvuong.github.io/post/trading-analysis-bot/&amp;title=Trading%20Analysis%20Bot" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Trading%20Analysis%20Bot%20https://trinhvanvuong.github.io/post/trading-analysis-bot/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://trinhvanvuong.github.io/post/trading-analysis-bot/&amp;title=Trading%20Analysis%20Bot" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://trinhvanvuong.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu1e632ab090898cc5e126c0914a3f6e2a_571525_270x270_fill_q75_lanczos_center.jpg" alt="Vuong V. Trinh"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://trinhvanvuong.github.io/">Vuong V. Trinh</a></h5>
+      <h6 class="card-subtitle">Distributed Control System &amp; Advanced Process Control Engineer</h6>
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:vanvuong.trinh@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/trinhvv" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Van_Vuong_Trinh" target="_blank" rel="noopener">
+        <i class="fab fa-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.fr/citations?user=U9xo4wsAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0001-9148-7878" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/trinhvv/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://vuongvtrinh.github.io/cv/curriculum_vitae.pdf" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/quantitative-finance/">Quantitative Finance from Analytics to Strategies</a></li>
+      
+      <li><a href="/project/anomaly-detection/">Real-time Anomaly Detection for Industrial Big Data</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Vuong V. Trinh 2021
+  </p>
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+    Published with
+    <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.7788e72737605ff4a224d06e0dbe9442.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

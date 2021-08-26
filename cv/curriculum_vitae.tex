@@ -1,0 +1,346 @@
+\documentclass[a4paper,11pt]{article}
+\RequirePackage[T1]{fontenc}
+
+\usepackage{times}
+\usepackage{calc}
+\usepackage[shortcuts]{extdash}
+
+\usepackage{graphicx} 
+
+\reversemarginpar
+
+\usepackage[paper=letterpaper,
+marginparwidth=1.1in,     
+marginparsep=.075in,      
+margin=0.4in,               
+tmargin=1.1in,
+includemp]{geometry}
+
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0em}
+\newlength{\bibsep}
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+	itemindent=-\bibhang,
+	itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+	topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+	itemindent=-\bibhang,
+	itemsep=0.05in,parsep=\z@,partopsep=0pt,
+	topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+{0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+	\parbox{4in}{\, \hfill %
+		\arabic{page} of \protect\pageref*{LastPage} % +LP
+		%                    \arabic{page}                               % -LP
+		\hfill \,}}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+\hypersetup{colorlinks,breaklinks,
+	linkcolor=darkblue,urlcolor=darkblue,
+	anchorcolor=darkblue,citecolor=darkblue}
+
+\renewcommand{\section}[1]{\pagebreak[3]%
+	\vspace{1.3\baselineskip}%
+	\phantomsection\addcontentsline{toc}{section}{#1}%
+	\noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+	\vspace{-\baselineskip}\par}
+
+\newcommand*\fixendlist[1]{%
+	\expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}}
+
+\let\originalItem\item
+\newcommand*\fixouterlist[1]{%
+	\expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+	\expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+	\expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}}
+\newcommand*\fixinnerlist[1]{%
+	\expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+	\expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+	\expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+	\expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}}
+
+\newlist{outerlist}{itemize}{3}
+\setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+\fixendlist{outerlist}
+\fixouterlist{outerlist}
+
+\newlist{lonelist}{itemize}{3}
+\setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+\fixendlist{lonelist}
+\fixouterlist{lonelist}
+
+\newlist{innerlist}{itemize}{3}
+\setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixinnerlist{innerlist}
+
+\newlist{loneinnerlist}{itemize}{3}
+\setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+\fixendlist{loneinnerlist}
+\fixinnerlist{loneinnerlist}
+
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\usepackage{doi}
+\usepackage{url}
+
+\urlstyle{same}
+\providecommand*\emaillink[1]{\nolinkurl{#1}}
+\providecommand*\email[1]{\href{mailto:#1}{\emaillink{#1}}}
+
+\usepackage{fontawesome}
+
+\begin{document}
+	
+	{\hspace*{-\marginparsep minus \marginparwidth}%
+		\begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+			\centering
+			{\LARGE \bfseries {Vuong V. Trinh}}\\
+			\vspace{0.2cm}
+			{\color{darkgray} Distributed Control System \& Advanced Process Control Engineer} \\
+			\vspace{0.25cm}
+			\hspace{1.75cm} \faGlobe \hspace{0.05cm} \href{https://trinhvanvuong.github.io}{https://trinhvanvuong.github.io} 
+			\hspace{0.05cm} \faEnvelope \hspace{0.05cm} \href{mailto:vanvuong.trinh@gmail.com}{vanvuong.trinh@gmail.com}
+			\hspace{0.05cm} \faPhone \hspace{0.05cm} {\color{darkblue} +84(0)932375111}
+			\hspace{0.05cm} \faGithub \hspace{0.05cm} \href{https://github.com/trinhvv}{trinhvv}
+			\vspace{0.1cm}
+			\rule{\columnwidth}{2pt}
+	\end{minipage}}
+	
+	\vspace{0.1cm}
+	
+	\section{Experience}
+	
+	\textbf{DCS / APC Engineer},
+	\href{http://nsrp.vn/}{\textbf{Nghi Son Refinery and Petrochemical LLC}}
+	\hfill {since 2020}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Artificial Intelligence Researcher}, \href{http://donga.edu.vn/}{\textbf{Dong A University Research Institute}}
+	\hfill {2019} 
+	\begin{innerlist}
+		\item Work with \href{https://sites.google.com/view/kim-phuc-tran}{Kim-Phuc Tran} (\href{http://www.ensait.fr/}{ENSAIT}/\href{http://www.gemtex.fr/}{GEMTEX}) on \href{https://www.researchgate.net/project/Real-time-Anomaly-Detection-for-Industrial-Big-Data}{real-time anomaly detection algorithms for industrial Big Data}, e.g. wireless sensor networks;
+		\item Intensive use of Python (\emph{Pandas, Scikit-Learn, Streamlit, Selenium, PyAutoGUI, Flask}); familiar with JAMstack (\emph{Hugo, Wowchemy, Netlify}), JS (\emph{Highcharts}) and cloud (\emph{Heroku, Azure, AWS, GCP}).
+	\end{innerlist}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Control System Engineer}, \href{https://www.bmuyl.com/}{\textbf{Benjamin Muyl Design Sarl}}
+	\hfill {2018} 
+	\begin{innerlist}
+		\item Work with \href{https://www.linkedin.com/in/bmuyl/}{Benjamin Muyl}  (\href{https://www.ineosteamuk.com/}{INEOS TEAM UK}) on optimal control of sail yachts with direct collocation;
+		\item Contribute to the software \href{https://pole-mer-bretagne-atlantique.com/en/component/projects/project/2235}{\emph{META}} by upgrading from Java / Matlab to Python using symbolic framework; 
+		\item Deploy Python (\emph{CasADi}), version management (\emph{Git}), production tools (\emph{Bash}) and unit-tests.
+	\end{innerlist}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Process Control Engineer}, \href{http://www.cea.fr/}{\textbf{French Alternative Energies and Atomic Energy Commission}} 
+	\hfill {2014--2017} \\
+	Supervisors: \href{http://www.mazenalamir.fr/home/}{Mazen Alamir} (\href{http://www.cnrs.fr/}{CNRS/GIPSA-lab}) and \href{https://www.researchgate.net/profile/P_Bonnay}{Patrick Bonnay} (\href{http://www.d-sbt.fr/en}{CEA/SBT}) on \href{https://trinhvanvuong.github.io/project/cryogenic-refrigerator/}{advanced cryogenic process control and energetic optimization}, within project \href{https://anr.fr/Project-ANR-13-SEED-0005}{ANR CRYOGREEN}.
+	\begin{innerlist}
+		\item Develop advanced model predictive control strategies, e.g. explicit constrained control and hierarchical distributed coordination, via machine learning, mathematical optimization and numerical algorithms;
+		\item Model and control of compression stations and cryogenic refrigerators using \href{http://www.d-sbt.fr/en/Pages/News/2016_Francois-Bonne.aspx}{\emph{Simcryogenics}}; experiments with \href{http://www.d-sbt.fr/en}{SBT}'s \href{http://inac.cea.fr/en/Phocea/Vie_des_labos/Ast/ast_visu.php?id_ast=771}{station 400W 1.8K} and \href{https://cern.ch}{CERN}'s \href{https://cds.cern.ch/record/708291}{18kW 4.5K LHC facilities};
+		\item \href{https://trinhvanvuong.github.io/project/solar-energy/}{Real-time nonlinear constrained control for Stirling engine in solar thermodynamic power plant};
+		\item Intensive use of Matlab and C (\emph{CPLEX, ACADO}); familiar with PLC/DCS/SCADA and technical editting (\emph{TeX, Inkscape}).
+	\end{innerlist}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Research Intern}, \href{http://www.gipsa-lab.fr/}{\textbf{French National Centre for Scientific Research}}
+	\hfill {2014}\\
+	Supervisors: \href{https://www.gipsa-lab.grenoble-inp.fr/~ioandore.landau/}{Ioan Dor\'{e} Landau} and \href{https://www.researchgate.net/profile/Luc_Dugard}{Luc Dugard} (\href{http://www.cnrs.fr/}{CNRS/GIPSA-lab}), on \href{https://www.gipsa-lab.grenoble-inp.fr/~ioandore.landau/benchmark_adaptive_regulation/}{active vibration control}.
+	\begin{innerlist}
+		\item Perform system identification, robust control design and experiments using Matlab and xPC Target;
+		\item  Laboratory instructor for adaptive control course within \href{http://www.eeci-igsc.eu/}{European Embedded Control Institute}.
+	\end{innerlist}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Industrial Intern}, \href{http://www.yhv.com.vn}{\textbf{Yazaki Corporation}}
+	\hfill {2011} 
+	\begin{innerlist}
+		\item Analyse technical specifications and devise suitable solution for automotive wire production conveyors;
+		\item Setup control box, relays and inverters; program PLC and HMI; deploy AutoCAD, Step7 and WinCC.
+	\end{innerlist}
+	
+	\section{Education}
+	
+	\href{https://trinhvanvuong.github.io/pdf/master_degree.pdf}{\textbf{M.S. Automation \& Control Engineering}},
+	\href{https://www.univ-grenoble-alpes.fr/}{Universit\'{e} Joseph Fourier} \& \href{http://www.grenoble-inp.fr/}{Grenoble INP} \hfill {2013--2014} \\
+	Mention: \emph{good} (\href{http://www.gipsa-lab.grenoble-inp.fr/MiSCIT/home/}{\emph{MiSCIT Program}}) | GPA: \href{https://trinhvanvuong.github.io/pdf/master_transcript.pdf}{15/20} | Rank: 3/18
+	
+	\vspace{0.1cm}
+	
+	\href{https://trinhvanvuong.github.io/pdf/engineer_degree.pdf}{\textbf{B.S. Automation \& Control Engineering}},
+	\href{https://www.hust.edu.vn}{Hanoi University of Science and Technology}
+	\hfill {2007--2012}\\
+	Mention: \emph{good} (\href{https://ctt-daotao.hust.edu.vn/DisplayWeb/DisplayBaiViet?baiviet=1156}{\emph{Talented Engineer's Program}}) | GPA: \href{https://trinhvanvuong.github.io/pdf/engineer_transcript.pdf}{3.17/4.00}
+	
+	\section{Awards}
+	
+	\href{https://trinhvanvuong.github.io/pdf/excellent_master_fellowship.pdf}{\textbf{Excellence Master Fellowship}}, 
+	\href{http://persyval-lab.org/}{LabEx PERSYVAL-Lab}
+	\hfill {2013}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Vallet Scholarship}, 
+	\href{http://rvn-vallet.org}{Rencontres du Vi\^{e}tnam}
+	\hfill {2008}
+	
+	\vspace{0.1cm}
+	
+	\textbf{Double Prize in Physics (1st) and Maths (cons)}, 
+	\href{http://www.nxbgd.vn}{Vietnam Mathematics \& Youth Magazine}
+	\hfill {2007}
+	
+	\section{Languages}
+	
+	Vietnamese (\emph{native}) | English (\emph{fluent}: \href{https://trinhvanvuong.github.io/pdf/ielts_certificate.pdf}{IELTS 6.5}) | French (\emph{basic})
+	
+	\newpage
+	
+	\section{Publications}
+	
+	\textbf{V. V. Trinh, M. Alamir, P. Bonnay and F. Bonne}, \href{https://doi.org/10.1016/j.ifacol.2016.10.173}{\textbf{Explicit model predictive control via nonlinear piecewise approximations}}, in \emph{Proceedings of the 10th IFAC Symposium in Nonlinear Control Systems}, Monterey, CA, USA, 2016.
+	
+	\vspace{0.1cm}
+	
+	\textbf{M. Alamir, V. V. Trinh and P. Bonnay}, \href{https://doi.org/10.1016/j.ifacol.2017.08.1363}{\textbf{On the stabilization of fixed-point iterations arising in hierarchical control design}}, in \emph{Proceedings of the 20th IFAC World Congress}, Toulouse, France, 2017. 
+	
+	\vspace{0.1cm}
+	
+	\textbf{M. Alamir, P. Bonnay, F. Bonne and V. V. Trinh}, \href{https://doi.org/10.1016/j.jprocont.2017.09.006}{\textbf{Fixed-point based hierarchical MPC control design for a cryogenic refrigerator}}, \emph{Journal of Process Control}, vol. 58, pp. 117-130, 2017. 
+	
+	\vspace{0.1cm}
+	
+	\textbf{V. V. Trinh, K. P. Tran and A. T. Mai}, \href{https://doi.org/10.1109/NAFOSTED.2017.8108030}{\textbf{Anomaly detection in wireless sensor networks via support vector data description with Mahalanobis kernels and discriminative adjustment}}, in \emph{Proceedings of the 2017 4th NAFOSTED Conference on Information and Computer Science}, Hanoi, Vietnam, 2017. 
+	
+	\vspace{0.1cm}
+	
+	\textbf{V. V. Trinh, K. P. Tran and T. H. Truong}, \href{https://doi.org/10.1109/ATC.2017.8167642}{\textbf{Data driven hyperparameter optimization of one-class support vector machines for anomaly detection in wireless sensor networks}}, in \emph{Proceedings of the 2017 International Conference on Advanced Technologies for Communications}, Quy Nhon, Vietnam, 2017.
+	
+	\section{Valorisation}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/2CPYPK5VMFSE}{\textbf{Google Project Management Professional Certificate}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.google.com/}{Google}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/L9ZXLUJ5LALY}{\textbf{Deep Learning Specialization}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.deeplearning.ai/}{DeepLearning.AI}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/9L9TW82QJL4P}{\textbf{Autodesk CAD/CAM for Manufacturing Specialization}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.autodesk.com/}{Autodesk}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/SD9FXPT9TGPW}{\textbf{Investment Management Specialization}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.unige.ch}{University of Geneva}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/A8H8JEC9ZS56}{\textbf{Blockchain Revolution Specialization}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.insead.edu/}{INSEAD}
+	
+	\vspace{0.1cm}
+	
+	\href{https://trinhvanvuong.github.io/pdf/TUM_Lean_Six_Sigma_Yellow_Belt_Certificate.pdf}{\textbf{TUM Lean Six Sigma Yellow Belt}}, \href{https://www.tum.de}{Technische Universit\"{a}t M\"{u}nchen}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/42398B2749UB}{\textbf{IBM Cybersecurity Analyst Professional Certificate}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.ibm.com/}{IBM}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/7ZHTFXMUPQ97}{\textbf{IBM Data Science Professional Certificate}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.ibm.com/}{IBM}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/specialization/certificate/J5T7HM3MSLAG}{\textbf{IBM Full Stack Cloud Developer Professional Certificate}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.ibm.com/}{IBM}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/GRZFUUXBLNDN}{\textbf{Creating and Developing a Tech Startup}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.polytechnique.edu/}{\'{E}cole Polytechnique} | \href{https://www.hec.edu/}{HEC Paris}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/MF6SH48HP9Z6}{\textbf{Creative Thinking: Techniques and Tools for Success}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.imperial.ac.uk/}{Imperial College London}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/HMAFBFWKTPLQ}{\textbf{Financial Markets}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.yale.edu/}{Yale University}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/NDW9NP2VQ3CK}{\textbf{Investment Management in an Evolving and Volatile World}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.hec.edu/}{HEC Paris} | \href{https://www.axa-im.com/}{AXA IM}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/WRN2XY9JFSB2}{\textbf{Blockchain: Foundations and Use Cases}}, \href{https://www.coursera.org/}{Coursera} | \href{https://consensys.net/}{Consensys}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/9ZM7APA2982L}{\textbf{Networking and Security Architecture with VMware NSX}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.vmware.com/}{VMWare}
+	
+	\vspace{0.1cm}
+	
+	\href{https://trinhvanvuong.github.io/pdf/APC-0001-VILT_R500.pdf}{\textbf{Advanced Process Control: Profit Controller \& Profit Optimizer Implementation}}, \href{https://www.honeywellprocess.com/}{Honeywell}
+	
+	\vspace{0.1cm}
+	
+	\href{https://trinhvanvuong.github.io/pdf/SM-4551.pdf}{\textbf{Safety Manager: Implementation}}, \href{https://www.honeywellprocess.com/}{Honeywell}
+	
+	\vspace{0.1cm}
+	
+	\href{https://courses.edx.org/certificates/9443065fac6d4a0889f0d086d7d15836}{\textbf{CS50's Introduction to Computer Science}}, \href{https://www.edx.org/}{edX} | \href{https://www.harvard.edu/}{Harvard University}
+	
+	\vspace{0.1cm}
+	
+	\href{https://www.coursera.org/account/accomplishments/certificate/YCK5ZQJ5BQK9}{\textbf{Initiation à la programmation (en C++)}}, \href{https://www.coursera.org/}{Coursera} | \href{https://www.epfl.ch/}{EPFL}
+	
+	\vspace{0.1cm}
+	
+	\href{https://trinhvanvuong.github.io/pdf/semie_certificate.pdf}{\textbf{Semaine d'\'{E}tude Maths-Info Entreprises}}, \href{https://www.agence-maths-entreprises.fr}{Agence Maths Entreprises}
+	
+	\section{References}
+	
+	\textbf{Kim-Phuc Tran} \hfill \emph{Associate Professor in Automation and Industrial Informatics} \\
+	Email: \href{mailto:kim-phuc.tran@ensait.fr}{kim-phuc.tran@ensait.fr} \hfill \'{E}cole Nationale Sup\'{e}rieure des Arts et Industries Textiles \\
+	Phone: {\color{darkblue} +33 (0)3 20 25 89 60} \hfill 2 all\'{e}e Louise et Victor Champier, 59056 Roubaix, France 
+	
+	\vspace{0.1cm}
+	
+	\textbf{Ioan-Dor\'{e} Landau} \hfill \emph{Emeritus Research Director at National Centre for Scientific Research} \\
+	Email: \href{mailto:ioan-dore.landau@gipsa-lab.grenoble-inp.fr}{ioan-dore.landau@gipsa-lab.fr} \hfill Grenoble Images Parole Signal Automatique Laboratoire \\
+	Phone: {\color{darkblue} +33 (0)4 76 82 63 91} \hfill 11 rue des Math\'{e}matiques, 38400 Saint-Martin-d'H\`{e}res, France 
+	
+\end{document}
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kim Phuc Tran | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/kim-phuc-tran/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/kim-phuc-tran/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kim Phuc Tran</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Thu, 10 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Kim Phuc Tran</title>
+      <link>https://trinhvanvuong.github.io/authors/kim-phuc-tran/</link>
+    </image>
+    
+    <item>
+      <title>Anomaly detection in wireless sensor networks via support vector data description with Mahalanobis kernels and discriminative adjustment</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data driven hyperparameter optimization of one-class support vector machines for anomaly detection in wireless sensor networks</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</link>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

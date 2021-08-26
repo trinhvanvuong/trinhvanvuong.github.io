@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Van Vuong Trinh | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/authors/van-vuong-trinh/</link>
+      <atom:link href="https://trinhvanvuong.github.io/authors/van-vuong-trinh/index.xml" rel="self" type="application/rss+xml" />
+    <description>Van Vuong Trinh</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>Van Vuong Trinh</title>
+      <link>https://trinhvanvuong.github.io/authors/van-vuong-trinh/</link>
+    </image>
+    
+    <item>
+      <title>Fixed-point based hierarchical MPC control design for a cryogenic refrigerator</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-hdmpc-jpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the stabilization of fixed-point iterations arising in hierarchical control design</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-hdmpc-ifacwc/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-hdmpc-ifacwc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anomaly detection in wireless sensor networks via support vector data description with Mahalanobis kernels and discriminative adjustment</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-nics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Explicit model predictive control via nonlinear piecewise approximations</title>
+      <link>https://trinhvanvuong.github.io/publication/2016-enmpc-nolcos/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2016-enmpc-nolcos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data driven hyperparameter optimization of one-class support vector machines for anomaly detection in wireless sensor networks</title>
+      <link>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</link>
+      <pubDate>Tue, 16 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/publication/2017-wsn-atc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

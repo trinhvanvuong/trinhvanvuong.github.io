@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sail-yacht | Vuong V. Trinh</title>
+    <link>https://trinhvanvuong.github.io/tag/sail-yacht/</link>
+      <atom:link href="https://trinhvanvuong.github.io/tag/sail-yacht/index.xml" rel="self" type="application/rss+xml" />
+    <description>sail-yacht</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Vuong V. Trinh 2021</copyright><lastBuildDate>Wed, 01 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://trinhvanvuong.github.io/media/portrait.jpg</url>
+      <title>sail-yacht</title>
+      <link>https://trinhvanvuong.github.io/tag/sail-yacht/</link>
+    </image>
+    
+    <item>
+      <title>Sail Yachts Simulation and Optimization</title>
+      <link>https://trinhvanvuong.github.io/project/sail-yacht/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>https://trinhvanvuong.github.io/project/sail-yacht/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
