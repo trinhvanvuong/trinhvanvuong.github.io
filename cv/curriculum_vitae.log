@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.4)  26 AUG 2021 13:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.4)  26 AUG 2021 14:16
 entering extended mode
 **./curriculum_vitae.tex
 (curriculum_vitae.tex
@@ -397,7 +397,7 @@ metwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-49.
+48.
 
 (D:\Users\trinhvv-admin\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -408,42 +408,32 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 AED: lastpage setting LastPage
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
  (curriculum_vitae.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
-
-
-Package rerunfilecheck Warning: File `curriculum_vitae.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `curriculum_vitae.out':
-(rerunfilecheck)             Before: D2C921A9A8725DEBDBF070DB38D97EBD;364
-(rerunfilecheck)             After:  29B32D324E35099959358D492D927CA3;320.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package rerunfilecheck Info: File `curriculum_vitae.out' has not changed.
+(rerunfilecheck)             Checksum: 29B32D324E35099959358D492D927CA3;320.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
  ) 
 Here is how much of TeX's memory you used:
- 8128 strings out of 481212
- 122540 string characters out of 2915704
+ 8126 strings out of 481212
+ 122518 string characters out of 2915704
  398510 words of memory out of 3000000
- 23574 multiletter control sequences out of 15000+200000
+ 23573 multiletter control sequences out of 15000+200000
  554823 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,5n,45p,485b,306s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section*.8} has been referenced but does not exis
-t, replaced by a fixed one
-
-{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{D:/Users/trinhvv-admin/Ap
-pData/Roaming/MiKTeX/fonts/enc/dvips/fontawesome/fontawesometwo.enc}<D:/Users/t
-rinhvv-admin/AppData/Roaming/MiKTeX/fonts/type1/public/fontawesome/FontAwesome.
-pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
-/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on curriculum_vitae.pdf (2 pages, 104108 bytes).
+{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{D:/Users/trinhvv-admin/
+AppData/Roaming/MiKTeX/fonts/enc/dvips/fontawesome/fontawesometwo.enc}<D:/Users
+/trinhvv-admin/AppData/Roaming/MiKTeX/fonts/type1/public/fontawesome/FontAwesom
+e.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1
+/urw/times/utmri8a.pfb>
+Output written on curriculum_vitae.pdf (2 pages, 103084 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
